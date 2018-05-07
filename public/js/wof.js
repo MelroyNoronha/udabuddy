@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-// Profile Tabs Initialization
-const tabs = document.querySelector(".tabs");
-const instance = M.Tabs.init(tabs);
-  var elem = document.querySelectorAll('.modal');
-  var ins = M.Modal.init(elem, {});
-
-=======
-// Profile Tabs Initialization
+// this page contains js for wof
 var config = {
   apiKey: "AIzaSyC18bxhVaauMyqjk4fvZkiUZkCU5qB9mDc",
   authDomain: "udabuddy.firebaseapp.com",
@@ -23,10 +15,10 @@ initApp = function () {
     if (user) {
       // User is signed in.
       // Please write your code inside here
-      const tabs = document.querySelector(".tabs");
-      const instance = M.Tabs.init(tabs);
-      var elem = document.querySelectorAll('.modal');
-      var ins = M.Modal.init(elem, {});
+      var btn = document.querySelector('#signIn');
+      btn.addEventListener('click', () => {
+        window.location.replace('/signIn', '_self');
+      });
     } else {
       // User is signed out.
       window.location.replace('/');
@@ -39,4 +31,3 @@ initApp = function () {
 window.addEventListener('load', function () {
   initApp()
 });
->>>>>>> 5fd7b6b5c18910fb92044d6da8312ad871d68d4f
